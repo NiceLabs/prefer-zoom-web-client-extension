@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Prefer Zoom Web Client",
+  "description": "Auto-switch Zoom meeting link to web edition",
+  "version": "0.2",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": [
+    "*://*.zoom.us/j/*",
+    "*://*.zoom.us/s/*",
+    "*://*.zoomgov.com/j/*",
+    "*://*.zoomgov.com/s/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "enabled": true,
+        "id": "zoom-redirect",
+        "path": "rules.json"
+      }
+    ]
+  }
+}

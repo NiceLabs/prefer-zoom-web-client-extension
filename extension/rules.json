@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "regexSubstitution": "/wc/\\1/join" }
+    },
+    "condition": {
+      "regexFilter": "/j/(\\d+)",
+      "requestDomains": ["zoom.us", "zoomgov.com"],
+      "requestMethods": ["get"],
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": { "regexSubstitution": "/wc/\\1/start" }
+    },
+    "condition": {
+      "regexFilter": "/s/(\\d+)",
+      "requestDomains": ["zoom.us", "zoomgov.com"],
+      "requestMethods": ["get"],
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
